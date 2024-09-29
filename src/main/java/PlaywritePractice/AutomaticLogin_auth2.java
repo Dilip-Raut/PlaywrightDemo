@@ -15,7 +15,7 @@ public class AutomaticLogin_auth2 {
 		Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 		BrowserContext   btContext =browser.newContext(new Browser.NewContextOptions().setStorageStatePath(Paths.get("applogin.json")));
 		Page page =btContext.newPage();
-		page.navigate("http://www.automationpractice.pl/index.php");
+		page.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 	}
 
