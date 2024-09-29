@@ -15,6 +15,7 @@ public class WindowOperations {
 		BrowserContext brxt1 = browser.newContext();
 		BrowserContext brxt2 = browser.newContext();
 		
+		//1 - open New tab/window/popup after clicking on link on parent page:
 		Page page1=brxt1.newPage();
 		page1.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		Thread.sleep(2000);
@@ -31,12 +32,12 @@ public class WindowOperations {
 		page1.close();
 		
 		
-		
+		//2 - open New tab/window/popup and enter new url:
 		Page page2=brxt2.newPage();
 		page2.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
 		Thread.sleep(2000);
-		//Open new tab and new url
+	
 		Page popup2=page2.waitForPopup(()->{
 			page2.click("a[target='_blank']");	
 		});
